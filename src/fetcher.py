@@ -1,13 +1,16 @@
 import praw
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 
-# Initialize Reddit API
+client_id = st.secrets["REDDIT_CLIENT_ID"]
+client_secret = st.secrets["REDDIT_CLIENT_SECRET"]
+
 reddit = praw.Reddit(
-    client_id=os.getenv("REDDIT_CLIENT_ID"),
-    client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
+    client_id=client_id,
+    client_secret=client_secret,
     user_agent="thread-analyzer"
 )
 
