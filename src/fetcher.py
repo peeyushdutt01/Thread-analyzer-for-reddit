@@ -6,8 +6,8 @@ load_dotenv()
 
 # Initialize Reddit API
 reddit = praw.Reddit(
-    client_id=os.getenv("REDDIT_CLIENT_ID"),
-    client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
+    client_id = st.secrets["REDDIT_CLIENT_ID"],
+    client_secret = st.secrets["REDDIT_CLIENT_SECRET"],
     user_agent="thread-analyzer"
 )
 
