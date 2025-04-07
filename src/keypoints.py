@@ -1,6 +1,8 @@
 from keybert import KeyBERT
+from sentence_transformers import SentenceTransformer
 
-kw_model = KeyBERT()
+model = SentenceTransformer("models/all-MiniLM-L6-v2")  # Load from local folder
+kw_model = KeyBERT(model)
 
 def extract_keypoints(thread_json, top_n=3):
     all_text = " ".join([comment["body"] for comment in thread_json["comments"]])
