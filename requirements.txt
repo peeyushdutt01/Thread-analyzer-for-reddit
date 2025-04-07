@@ -1,0 +1,10 @@
+keybert==0.9.0
+matplotlib==3.10.0
+matplotlib-inline==0.1.7
+matplotlib-venn==1.1.2
+nltk==3.9.1
+praw==7.8.1
+prawcore==2.4.0
+sentence-transformers==3.4.1
+transformers==4.50.3
+wordcloud==1.9.4
