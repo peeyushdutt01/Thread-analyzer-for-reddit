@@ -4,9 +4,8 @@ from dotenv import load_dotenv
 import streamlit as st
 
 load_dotenv()
-
-client_id = st.secrets["REDDIT_CLIENT_ID"]
-client_secret = st.secrets["REDDIT_CLIENT_SECRET"]
+client_id = "NaOWHJF7Mb0dtvHR8zT9lQ"
+client_secret = "D0zwHowYTW2Y9KQgqtYgxKidUt5S4w"
 
 reddit = praw.Reddit(
     client_id=client_id,
