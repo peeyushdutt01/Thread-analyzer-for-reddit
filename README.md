@@ -1,7 +1,11 @@
 
 # 🧵 Reddit Thread Sentiment Analyzer
 
-This project analyzes Reddit threads to determine the sentiment of comments using Natural Language Processing (NLP). It includes a Streamlit-based web app that lets users input a subreddit and visualize sentiment trends interactively.
+Reddit Thread Sentiment Analyzer is an interactive web application built with Streamlit that analyzes the sentiment of Reddit thread comments. It fetches a full Reddit discussion thread via the Reddit API (`praw`), processes each comment using the VADER sentiment analysis tool from `nltk`, and visualizes the emotional tone of the conversation.
+
+The app helps users understand how discussions evolve across a thread — showing sentiment changes over comment depth, extracting the main discussion topics using `KeyBERT`, and generating a word cloud from all user comments. This is particularly useful for researchers, moderators, content creators, or anyone curious about online community dynamics.
+
+Whether you're investigating controversial topics, exploring public opinion, or just want to visualize a conversation in a new way, this tool gives you a deep dive into Reddit's unique thread structure and sentiment flow.
 
 ---
 
@@ -21,10 +25,12 @@ This project analyzes Reddit threads to determine the sentiment of comments usin
 
 ## 🚀 Features
 
-- Fetch Reddit threads using the Reddit API (via `praw`)
-- Perform sentiment analysis on thread comments using VADER (from `nltk`)
-- Visualize sentiment trends in a Streamlit app
-- Easily configurable subreddit and post limit
+- Fetch threads and all comments using Reddit's API (`praw`)
+- Sentiment analysis with VADER (NLTK)
+- Extract top key discussion points with `KeyBERT`
+- Word cloud visualization using `WordCloud`
+- Comment sentiment depth chart using `matplotlib`
+- Simple UI with `Streamlit`
 
 ---
 
@@ -64,8 +70,8 @@ streamlit run src/app.py
 
 src/
 │
-├── app.py              # Streamlit app (UI layer)
-├── fetcher.py          # Reddit thread fetching logic
-├── sentiment.py        # Sentiment analysis using NLTK VADER
-├── keypoints.py        # Key discussion point extraction using KeyBERT
-├── visualizer.py       # Word cloud and sentiment trend plots
+├── app.py              # Streamlit app (UI layer) <br>
+├── fetcher.py          # Reddit thread fetching logic <br>
+├── sentiment.py        # Sentiment analysis using NLTK VADER <br>
+├── keypoints.py        # Key discussion point extraction using KeyBERT <br>
+├── visualizer.py       # Word cloud and sentiment trend plots <br>
